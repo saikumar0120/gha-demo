@@ -3,7 +3,7 @@ on: workflow_dispatch
 env:
   APP_ENV: "dev"
 jobs:
-  env_demo:
+  env_demo: 
     runs-on: ubuntu-latest
     steps:
       - name: Connecting to Env
