@@ -33,7 +33,7 @@ jobs:
 
   success_notify:
     needs: ['quality_check','dev_deploy','prod_deploy']
-    if: ${{ always() && !failure }}
+    if: ${{ always() && !failure() }}
     runs-on: ubuntu-latest
 
     steps:
