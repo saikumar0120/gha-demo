@@ -32,11 +32,8 @@ jobs:
         run: echo "Deploying the code to production environment"
 
   success_notify:
-    needs:
-      - quality_check
-      - dev_deploy
-      - prod_deploy
-    if: ${{ success() }}
+    needs: ['quality_check','dev_deploy','prod_deploy']
+    if: ${{ always() && !failure }}
     runs-on: ubuntu-latest
 
     steps:
@@ -44,10 +41,7 @@ jobs:
         run: echo "Success email sent to the team"
 
   failure_notify:
-    needs:
-      - quality_check
-      - dev_deploy
-      - prod_deploy
+    needs: ['quality_check','dev_deploy','prod_deploy']
     if: ${{ failure() }}
     runs-on: ubuntu-latest
 
