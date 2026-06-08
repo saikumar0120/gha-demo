@@ -1,0 +1,11 @@
+name: Or Condition Demo
+on: push
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run for Sai or Sushma
+        if: github.actor == 'Sai' || github.actor == 'Sushma'
+        run: echo "It is triggered by either Sai or Sushma"
+      
+        
