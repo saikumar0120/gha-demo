@@ -19,4 +19,4 @@ jobs:
     if: github.event_name == 'push' && github.ref_name == 'name'
     steps:
       - name: Depoly Step
-        run: echo "Depolying the app"
+        run: echo "Depolying the app "
