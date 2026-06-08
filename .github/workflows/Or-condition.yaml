@@ -4,8 +4,8 @@ jobs:
   demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Run for Sai or Sushma
-        if: github.actor == 'Sai' || github.actor == 'Sushma'
+      - name: Run for Hari or Javahometech
+        if: github.actor == 'Hari' || github.actor == 'javahometech'
         run: echo "It is triggered by either Sai or Sushma"
       
         
