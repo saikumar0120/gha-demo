@@ -38,7 +38,7 @@ jobs:
 
     steps:
       - name: Notify success
-        run: echo "Success email sent to the team "
+        run: echo "Success email sent to the team"
 
   failure_notify:
     needs: ['quality_check','dev_deploy','prod_deploy']
