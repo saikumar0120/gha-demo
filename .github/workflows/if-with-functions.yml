@@ -47,4 +47,4 @@ jobs:
 
     steps:
       - name: Notify failure
-        run: echo "Failure email sent to the team"
+        run: echo "Failure email sent to the team "
